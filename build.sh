@@ -1,9 +1,10 @@
 #!/bin/sh
-# Fuerza que HOME apunte al home de jenkins
+
+# 1) Define HOME al home de Jenkins
 export HOME=/home/jenkins
 
-# Crea el directorio .docker en su home (permite guardar credenciales)
+# 2) Crea únicamente el subdirectorio .docker (Jamás el home completo)
 mkdir -p "$HOME/.docker"
 
-# Lanza Kaniko desde /kaniko/executor
+# 3) Lanza Kaniko desde la ruta absoluta
 exec /kaniko/executor "$@"
