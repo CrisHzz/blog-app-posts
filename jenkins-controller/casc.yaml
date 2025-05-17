@@ -36,7 +36,7 @@ jenkins:
               - "regcred"
             containers:
               - name: "jnlp"
-                image: "crishzz/jenkins-jnlp-kaniko:v2"
+                image: "crishzz/jenkins-jnlp-kaniko:v3"
                 workingDir: "/home/jenkins/agent"
                 command: ""
                 args: ""
